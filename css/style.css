@@ -140,3 +140,18 @@ header .title {
 
 .icon {
   text-align: right; }
+
+@media only screen and (max-width: 375px) {
+  .main {
+    flex-direction: column;
+    margin-top: 5rem; }
+  .card {
+    width: 88%;
+    margin-bottom: 0.5rem; }
+  .description h4 {
+    width: 75%; }
+  header .title h1,
+  h2 {
+    font-size: 25px; }
+  header .title h2 {
+    font-size: 25px; } }
