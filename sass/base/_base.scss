@@ -119,6 +119,7 @@ header .title {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
 .left,
@@ -184,11 +185,76 @@ header .title {
 }
 
 
+@media only screen and (max-width: 500px) {
+
+    .main {
+        flex-direction: column;
+        margin-top: 4rem;
+        align-items: center;
+    }
+
+    .left,
+    .right {
+        align-items: center;
+    }
+
+    .center {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        width: 70%;
+        margin-bottom: 0.5rem;
+    }
+
+    .description h4 {
+        width: 75%;
+    }
+
+    header .title h1,
+    h2 {
+        font-size: 25px;
+    }
+
+    header .title h2 {
+        font-size: 25px;
+    }
+
+}
+
 @media only screen and (max-width: 375px) {
 
     .main {
         flex-direction: column;
         margin-top: 5rem;
+    }
+
+    .card {
+        width: 88%;
+        margin-bottom: 0.5rem;
+    }
+
+    .description h4 {
+        width: 75%;
+    }
+
+    header .title h1,
+    h2 {
+        font-size: 25px;
+    }
+
+    header .title h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 365px) {
+
+    .main {
+        flex-direction: column;
+        margin-top: 10rem;
     }
 
     .card {
