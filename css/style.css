@@ -50,6 +50,10 @@ Fonts
   font-size: var(--font-size-large);
   color: var(--neutral-color-dark-blue); }
 
+.heading-3 {
+  font-weight: var(--font-weight-1);
+  color: var(--neutral-color-grayish-blue); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -71,17 +75,8 @@ body {
 
 header {
   text-align: center;
-  padding-top: 2rem;
+  padding: 2rem;
   margin-bottom: 2rem; }
-
-.description {
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .description h4 {
-    font-weight: var(--font-weight-1);
-    color: var(--neutral-color-grayish-blue);
-    width: 60%; }
 
 .main {
   width: 100%;
@@ -90,23 +85,14 @@ header {
   justify-content: center;
   margin-bottom: 3rem; }
 
-.left,
-.center,
-.right {
+.card {
   display: flex;
   flex-direction: column;
-  height: 100%; }
-
-.left,
-.right {
-  justify-content: center; }
-
-.center {
-  justify-content: space-evenly; }
-
-.card {
-  width: 350px;
+  flex: 1 1 350px;
   padding: 1.5rem;
   margin: 1.5rem;
   border-radius: 5px;
   box-shadow: 2px 2px 20px var(--neutral-color-grayish-blue); }
+  .card img {
+    justify-self: end;
+    width: 30%; }
