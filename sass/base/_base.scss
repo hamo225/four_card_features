@@ -71,10 +71,6 @@ Fonts
     font-size: var(--font-size);
 }
 
-.heading-4 {}
-
-.heading-5 {}
-
 * {
     margin: 0;
     padding: 0;
@@ -100,28 +96,30 @@ body {
 }
 
 header {
+    max-width: 500px;
     text-align: center;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem auto 0rem;
 }
 
 .main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, minmax(35rem, 1fr));
+    grid-template-rows: repeat(3, minmax(7rem, 1fr));
     justify-items: center;
-
+    max-width: 90vw;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    gap: 1rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    width: 35rem;
+    max-width: 35rem;
     padding: 3rem 5rem;
     border-radius: 5px;
     box-shadow: 2px 2px 20px var(--neutral-color-grayish-blue);
-    border-top: 3px solid var(--primary-color-orange);
     font-size: 1.5rem;
 
 
@@ -133,26 +131,35 @@ header {
     }
 
     & img {
-        align-self: end;
         width: 25%;
         margin-top: 3rem;
     }
 
-    &-1 {}
+    &-1 {
+        border-top: 3px solid var(--primary-color-cyan);
+        grid-row: 2/3;
 
-    grid-row:2/3;
+    }
+
 
     &-2 {
+        border-top: 3px solid var(--primary-color-red);
         grid-column: 2/3;
         grid-row: 1/2;
+        position: absolute;
+        top: 9rem;
     }
 
     &-3 {
+        border-top: 3px solid var(--primary-color-orange);
         grid-column: 2/3;
         grid-row: 3/4;
+        position: absolute;
+        top: -9rem;
     }
 
     &-4 {
+        border-top: 3px solid var(--primary-color-blue);
         grid-column: 3/4;
         grid-row: 2/3;
     }
